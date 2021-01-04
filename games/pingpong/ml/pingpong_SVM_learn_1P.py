@@ -118,5 +118,5 @@ acc_knn_aft_scaler = accuracy_score(yknn_aft_scaler,y_test)
 '''
 
 #----------------------------------------------------------------------------------------------------------------------------
-filename = "C:\\Users\\bigse\\MLGame\\games\\pingpong\\SVM_example.sav"
+filename = "C:\\Users\\bigse\\MLGame\\games\\pingpong\\SVM_example_1P.sav"
 pickle.dump(svr , open(filename , 'wb'))

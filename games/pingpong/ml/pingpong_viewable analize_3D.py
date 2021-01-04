@@ -6,7 +6,14 @@ import matplotlib
 import matplotlib.pyplot as plt
 from sklearn import svm
 
+from mpl_toolkits.mplot3d import Axes3D
+'''
 fig = plt.figure()
+axis = fig.gca(projection='3d')
+'''
+fig = plt.figure()
+fig.add_subplot(111, projection='3d')
+
 item_index = 0
 load_file = 0
 folder_path = "C:\\Users\\bigse\\MLGame\\games\\pingpong\\log"     #指定LOG資料夾位置
@@ -82,8 +89,8 @@ for item in folder_content:
                 else:
                     ball_return.append(100)
 
-
-plt.scatter(ball_start, ball_speed, ball_stop, c=ball_return)
+ax122 = plt.subplot(1,2,2, projection='3d')
+ax122.scatter(ball_start, ball_speed, ball_stop, c='r')
 plt.title("retune point", fontsize=12)
 plt.xlabel("hit point", fontsize=12)
 plt.ylabel("speed x", fontsize=12)

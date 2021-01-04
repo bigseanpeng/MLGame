@@ -24,7 +24,7 @@ class Platform(pygame.sprite.Sprite):
         self._speed = [0, 0]
         self._init_pos = init_pos
 
-        self.rect = pygame.Rect(*init_pos, 40, 30)
+        self.rect = pygame.Rect(*init_pos, 40, 30)# 40, 30
         self.image = self._create_surface(side, color)
 
     def _create_surface(self, side, color):

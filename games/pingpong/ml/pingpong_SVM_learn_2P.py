@@ -65,7 +65,7 @@ for item in folder_content:
         hit.append(98)
 
         for i in range (0,len(data_list)-1):
-            if data_list[i]['ball'][1]>420-5-1 and data_list[i]['status'] == "GAME_ALIVE":
+            if data_list[i]['ball'][1]<80+5+1 and data_list[i]['status'] == "GAME_ALIVE":
 
                 hit.append(data_list[i]['ball'][0])
                 ball_start.append(hit[-2])
@@ -118,5 +118,5 @@ acc_knn_aft_scaler = accuracy_score(yknn_aft_scaler,y_test)
 '''
 
 #----------------------------------------------------------------------------------------------------------------------------
-filename = "C:\\Users\\bigse\\MLGame\\games\\pingpong\\SVM_example.sav"
+filename = "C:\\Users\\bigse\\MLGame\\games\\pingpong\\SVM_example_2P.sav"
 pickle.dump(svr , open(filename , 'wb'))
